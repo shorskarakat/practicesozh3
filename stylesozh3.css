@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke; 
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: sticky; 
+  top: 0;
+  z-index: 10;      
+  background-color: navy; 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: yellow; 
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.title {
+  text-align: center;
+  color: navy;
+  margin-top: 30px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid lightgray; 
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 calc(25% - 20px); 
+  
+  position: relative; 
+}
+
+.card h3 {
+  color: navy; 
+  margin-top: 0;
+}
+
+.badge {
+  position: absolute; 
+  top: -10px;        
+  right: -10px;       
+  background-color: crimson;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.top-btn {
+  position: fixed; 
+  bottom: 20px;    
+  right: 20px;    
+  z-index: 10;     
+  
+  background-color: navy;
+  color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px; 
+  border-radius: 50%; 
+  text-decoration: none;
+  font-size: 20px;
+}
+
+@media (max-width: 1199px) {
+  .card {
+    flex: 1 1 calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card {
+    flex: 1 1 100%; 
+  }
+}
